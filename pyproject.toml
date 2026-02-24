@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory-layer"
+version = "0.1.0"
+description = "Five-layer persistent memory for AI agents — instinct, knowledge, episodic, relational, meta"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "XiaoZhu AI", email = "wangjiaing58@gmail.com"},
+]
+keywords = ["ai", "agent", "memory", "llm", "personality"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "httpx>=0.24.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+agent-memory = "cli:main"
+
+[project.urls]
+Homepage = "https://github.com/xiaozhu-ai/agent-memory-layer"
+
+[tool.setuptools.packages.find]
+include = ["layers*"]
