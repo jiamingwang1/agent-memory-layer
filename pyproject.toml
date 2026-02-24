@@ -33,5 +33,8 @@ agent-memory = "cli:main"
 [project.urls]
 Homepage = "https://github.com/xiaozhu-ai/agent-memory-layer"
 
+[tool.setuptools]
+py-modules = ["memory_system", "recall", "consolidation", "sleep", "cli", "openclaw_hook"]
+
 [tool.setuptools.packages.find]
 include = ["layers*"]
